@@ -1,13 +1,82 @@
-# AI_hackathon
-This case study was given for an AI Hackathon<br>
 
-<p>
-Welcome to the year 2912, where your data science skills are needed to solve a cosmic mystery. We've received a transmission from four lightyears away and things aren't looking good.
+# 🚀 Spaceship Titanic - AI Hackathon Challenge
 
-The Spaceship Titanic was an interstellar passenger liner launched a month ago. With almost 13,000 passengers on board, the vessel set out on its maiden voyage transporting emigrants from our solar system to three newly habitable exoplanets orbiting nearby stars.
+Welcome to the **Spaceship Titanic** repository! This project was created as part of an AI Hackathon challenge where the goal was to **predict which passengers were transported to an alternate dimension** after the spaceship collided with a spacetime anomaly.
 
-While rounding Alpha Centauri en route to its first destination—the torrid 55 Cancri E—the unwary Spaceship Titanic collided with a spacetime anomaly hidden within a dust cloud. Sadly, it met a similar fate as its namesake from 1000 years before. Though the ship stayed intact, almost half of the passengers were transported to an alternate dimension!
+## 🧩 Problem Statement
 
-To help rescue crews and retrieve the lost passengers, you are challenged to predict which passengers were transported by the anomaly using records recovered from the spaceship’s damaged computer system.
+The interstellar passenger liner **Spaceship Titanic** was carrying over 13,000 passengers on its voyage to habitable exoplanets. After a collision with a spacetime anomaly, nearly half the passengers were mysteriously transported to another dimension. Using partially recovered data from the ship’s computer, our task is to build a machine learning model to predict whether each passenger was transported.
 
-Help save them and change history!</p>
+## 📁 Dataset Overview
+
+The dataset includes features such as:
+
+- `PassengerId`: Unique identifier
+- `HomePlanet`: Planet the passenger is from
+- `CryoSleep`: Whether the passenger was in cryosleep
+- `Cabin`: Cabin assignment (Deck/Num/Side)
+- `Destination`: Destination planet
+- `Age`: Age of the passenger
+- `VIP`: Whether the passenger is a VIP
+- `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`: Expenses across ship facilities
+- `Name`: Passenger name
+- `Transported`: **Target variable** (True if transported)
+
+## 🧠 Approach
+
+1. **Data Preprocessing**
+   - Handled missing values using median (for numerical) and mode/defaults (for categorical).
+   - Extracted features from `Cabin` (`Deck`, `Num`, `Side`).
+   - Created dummy variables for categorical columns.
+   - Extracted titles from `Name` (future enhancement).
+
+2. **Modeling**
+   - Used `GradientBoostingClassifier` from scikit-learn.
+   - Performed a basic train/validation split.
+   - Tuned hyperparameters using `RandomizedSearchCV` (included, optional).
+
+3. **Evaluation**
+   - Achieved competitive validation accuracy.
+   - Final predictions exported to `Final_submission.csv`.
+
+## 📦 Libraries Used
+
+- `pandas`
+- `numpy`
+- `scikit-learn`
+- `scipy`
+
+## 🏁 Running the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ayushs135/spaceship-titanic-ai.git
+   cd spaceship-titanic-ai
+   ```
+
+2. Install required packages:
+   ```bash
+   pip install pandas numpy scikit-learn scipy
+   ```
+
+3. Place the dataset (`train.csv` and `test.csv`) in the working directory.
+
+4. Run the model script:
+   ```bash
+   python model.py
+   ```
+
+5. The output `Final_submission.csv` will contain the predictions.
+
+## 📊 Results
+
+Achieved a validation accuracy of **~80%** (replace with your actual accuracy). Further improvements possible with feature engineering and model tuning.
+
+
+## 📌 TODOs & Future Work
+
+- Try deep learning models
+
+## 🙌 Acknowledgements
+
+Thanks to the organizers of the AI Hackathon for this fun and creative problem!
