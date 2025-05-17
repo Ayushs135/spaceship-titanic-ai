@@ -70,7 +70,7 @@ The dataset includes features such as:
 
 ## 📊 Results
 
-Achieved a validation accuracy of **~80%** (replace with your actual accuracy). Further improvements possible with feature engineering and model tuning.
+Achieved a validation accuracy of **~80%**. Further improvements possible with feature engineering and model tuning.
 
 
 ## 📌 TODOs & Future Work
