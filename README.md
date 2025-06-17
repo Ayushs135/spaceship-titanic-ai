@@ -75,7 +75,7 @@ Achieved a validation accuracy of **~80%**. Further improvements possible with f
 
 ## 📌 TODOs & Future Work
 
-- Try deep learning models
+- Try deep learning models.
 
 ## 🙌 Acknowledgements
 
